@@ -1,5 +1,4 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import UnstructuredFileLoader
 from langchain.vectorstores.faiss import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.chains.hyde.base import HypotheticalDocumentEmbedder
@@ -26,6 +25,8 @@ documents = [
     for text_path_candidate in text_path_candidates
     if read_text(text_path_candidate)
 ]
+text_splitter = RecursiveCharacterTextSplitter()
+documents = text_splitter.split_documents(documents)
 
 
 # Load Data to vectorstore
