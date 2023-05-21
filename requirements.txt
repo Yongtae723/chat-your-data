@@ -4,3 +4,7 @@ unstructured
 faiss-cpu
 git+https://github.com/twintproject/twint.git@origin/master
 nest_asyncio
+tiktoken
+azure-core
+nest_asyncio
+azure-core
