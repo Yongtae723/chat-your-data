@@ -1,6 +1,6 @@
 from query_data import load_front_agent
 from tools import load_tools
-
+from config import settings
 
 if __name__ == "__main__":
     tools = load_tools(["get_recent_tweet", "search_from_docs"])
